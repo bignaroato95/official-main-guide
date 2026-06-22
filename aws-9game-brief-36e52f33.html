@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>九游 · 稳定服务与产品说明</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f2f4f6;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif;
+            color: #1e2a3a;
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+
+        .page {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        /* hero 区域 */
+        .hero {
+            background: #ffffff;
+            border-radius: 24px;
+            padding: 2.5rem 2.8rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03), 0 1px 2px rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(220, 225, 232, 0.5);
+            transition: box-shadow 0.25s;
+        }
+
+        .hero-tag {
+            display: inline-block;
+            background: #e7ebf0;
+            border-radius: 40px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: #2d4056;
+            padding: 0.2rem 1rem;
+            letter-spacing: 0.02em;
+            margin-bottom: 1rem;
+        }
+
+        .hero h1 {
+            font-size: 2.2rem;
+            font-weight: 550;
+            letter-spacing: -0.01em;
+            color: #0b1a2e;
+            margin-bottom: 0.6rem;
+        }
+
+        .hero p {
+            font-size: 1rem;
+            color: #3d4e62;
+            max-width: 680px;
+        }
+
+        /* 卡片通用 */
+        .card-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .card {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 1.8rem 2rem;
+            border: 1px solid #e2e7ed;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.02), 0 1px 3px rgba(0, 0, 0, 0.04);
+            flex: 1 1 260px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .card:hover {
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.04), 0 2px 4px rgba(0, 0, 0, 0.05);
+            transform: translateY(-2px);
+        }
+
+        .card-icon {
+            font-size: 1.7rem;
+            margin-bottom: 0.6rem;
+            display: block;
+            opacity: 0.85;
+        }
+
+        .card h3 {
+            font-weight: 540;
+            font-size: 1.1rem;
+            margin-bottom: 0.4rem;
+            color: #14273b;
+        }
+
+        .card p, .card li {
+            font-size: 0.9rem;
+            color: #3d4f62;
+        }
+
+        .card ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .card li {
+            padding: 0.2rem 0;
+            position: relative;
+            padding-left: 1.2rem;
+        }
+
+        .card li::before {
+            content: "—";
+            position: absolute;
+            left: 0;
+            color: #8798ab;
+        }
+
+        /* 宽卡片 */
+        .wide-card {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 1.8rem 2rem;
+            border: 1px solid #e2e7ed;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.02), 0 1px 3px rgba(0, 0, 0, 0.04);
+            margin-bottom: 1.5rem;
+            width: 100%;
+        }
+
+        .wide-card h2 {
+            font-weight: 520;
+            font-size: 1.3rem;
+            margin-bottom: 0.8rem;
+            border-bottom: 1px solid #eef1f5;
+            padding-bottom: 0.5rem;
+            color: #14273b;
+        }
+
+        .wide-card p, .wide-card li {
+            font-size: 0.95rem;
+            color: #2f4156;
+        }
+
+        .inline-link {
+            color: #2c5f8a;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.25s, color 0.2s;
+            font-weight: 480;
+        }
+
+        .inline-link:hover {
+            color: #134a73;
+            border-bottom-color: #2c5f8a;
+        }
+
+        .faq-item {
+            margin-bottom: 0.8rem;
+        }
+
+        .faq-question {
+            font-weight: 500;
+            color: #1b3147;
+        }
+
+        .faq-answer {
+            margin-top: 0.2rem;
+            color: #3b5066;
+        }
+
+        .note {
+            background: #f7f9fc;
+            padding: 1rem 1.4rem;
+            border-radius: 16px;
+            border-left: 3px solid #b0c4d9;
+            margin: 1rem 0;
+            font-size: 0.92rem;
+        }
+
+        .footer {
+            margin-top: 2.5rem;
+            text-align: center;
+            color: #6b7d92;
+            font-size: 0.85rem;
+            border-top: 1px solid #d7dee6;
+            padding-top: 1.5rem;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 1rem 0.8rem;
+            }
+            .hero {
+                padding: 1.8rem 1.5rem;
+            }
+            .hero h1 {
+                font-size: 1.7rem;
+            }
+            .card {
+                flex: 1 1 100%;
+                padding: 1.4rem;
+            }
+            .wide-card {
+                padding: 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+
+    <!-- hero 摘要 -->
+    <div class="hero">
+        <span class="hero-tag">产品说明 · 稳定入口</span>
+        <h1>九游 · 从清晰页面到可靠使用</h1>
+        <p>一份面向新老朋友的产品式介绍：了解基本特征、常见场景与使用建议，让每一次开启都心中有数。</p>
+    </div>
+
+    <!-- 特点卡片 -->
+    <div class="card-grid">
+        <div class="card">
+            <span class="card-icon">📡</span>
+            <h3>服务说明</h3>
+            <p>九游是一个提供数字内容与互动服务的平台。页面结构清晰，入口稳定，适合日常浏览与轻量操作。</p>
+        </div>
+        <div class="card">
+            <span class="card-icon">🧩</span>
+            <h3>亮点速览</h3>
+            <ul>
+                <li>界面风格统一，导航明确</li>
+                <li>内容分类有条理，查找顺手</li>
+                <li>基础功能响应及时，体验流畅</li>
+                <li>持续维护，更新节奏稳定</li>
+            </ul>
+        </div>
+        <div class="card">
+            <span class="card-icon">🧭</span>
+            <h3>使用建议</h3>
+            <ul>
+                <li>建议使用最新浏览器访问</li>
+                <li>首次使用可先浏览页面结构</li>
+                <li>按需选择对应版块，逐步熟悉</li>
+                <li>遇到问题可参照页面内的指引</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 场景与提示 -->
+    <div class="wide-card">
+        <h2>适用场景与说明</h2>
+        <p>无论你是想了解某个主题，还是想找一个日常可以依赖的页面入口，<a class="inline-link" href="https://aws-9game.com">九游</a> 提供了一个相对稳定的起点。页面信息以实用为主，没有多余的跳转干扰，适合在碎片时间里快速进入状态。</p>
+        <div class="note">
+            <strong>一点提示：</strong> 合理使用页面功能，留意自身网络环境与设备兼容性。平台内容会随运营更新，具体以实际页面为准。
+        </div>
+        <p style="margin-top: 0.6rem;">另外，建议定期清理浏览器缓存，以保证页面样式与交互的正常展示。如果你在使用过程中发现页面布局或链接有变化，通常是正常的迭代调整。</p>
+    </div>
+
+    <!-- FAQ 摘要 -->
+    <div class="wide-card">
+        <h2>常见理解摘要</h2>
+        <div class="faq-item">
+            <div class="faq-question">Q：九游 页面适合哪些人？</div>
+            <div class="faq-answer">面向对数字内容有基本需求的普通用户，不限定特定人群。页面设计偏向简洁直观，新用户也能较快上手。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">Q：访问时需要特殊设置吗？</div>
+            <div class="faq-answer">不需要。直接通过浏览器访问 <a class="inline-link" href="https://aws-9game.com">九游</a> 即可，保持网络通畅。页面不依赖额外插件。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">Q：页面内容会频繁变动吗？</div>
+            <div class="faq-answer">内容会按周期进行维护与补充，不会无故频繁变化。你可以将其视为一个相对稳定的信息入口。</div>
+        </div>
+        <p style="margin-top: 1rem; font-size: 0.9rem; color: #3d5068;">以上为常见问题摘要，更具体的说明可参考页面内相应指引。</p>
+    </div>
+
+    <!-- 可信但克制的访问说明 -->
+    <div class="wide-card" style="border-left: 3px solid #b8cadc;">
+        <h2>访问说明</h2>
+        <p>本页面仅作产品式介绍。如需进一步了解或使用相关服务，可直接前往 <a class="inline-link" href="https://aws-9game.com">九游</a>。该链接指向长期维护的固定地址，请根据自身需求与判断使用。</p>
+        <p style="margin-top: 0.6rem;">我们不夸大功能，也不做任何无法兑现的承诺。页面中所提及的特点均基于当前版本的实际表现，未来若有调整将如实呈现。保持理性预期，才能获得更舒适的体验。</p>
+    </div>
+
+    <!-- 页脚 -->
+    <div class="footer">
+        <span>产品说明页面 · 信息仅供参考</span>
+    </div>
+
+</div>
+</body>
+</html>
